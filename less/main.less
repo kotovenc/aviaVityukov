@@ -2,6 +2,8 @@
 @lightbg: #f5f5f5;
 @darkbg: #343a40;
 @evendarkerbg: #23292f;
+@TextOnWhite:#777777;
+
 
 * {
 	margin: 0;
@@ -21,6 +23,11 @@ header {
 	background-color: #434344;
 	overflow: hidden;
 }
+
+p{
+	font-weight:lighter;
+}
+
 .header-panel {
 	position: fixed;
 	z-index: 2;
@@ -34,8 +41,11 @@ header {
 	//font-weight: bold;
 	font-size: 20px;
 	color: white;
-}
 
+}
+#training{
+	z-index:6;
+}
 .header-slider{
 	position: absolute;
 	width: 100%;
@@ -155,6 +165,10 @@ main{
 		transform: scaleX(-1);
 		filter: invert(100%);
 	}
+	p{
+		color:@lightbg;
+	}
+	width:100vw;
 }
 
 .separator{
@@ -219,4 +233,63 @@ footer{
 	height: 100vh;
 	background-color: black;
 	opacity: 0.75;
+}
+/*********************training***************************/
+.darktext{
+	color:@darkbg;
+}
+
+.flex{
+	display:flex;
+	padding:20px;
+	p{
+  		flex: 2 200px;
+	}	
+}
+.flexcol{
+	flex-direction:column;
+}
+.aandopen{
+	width:100vw;
+	background-color:@lightbg;
+	box-shadow: 0 0 20px black;
+	margin:20px 0;
+	font-size:30px
+}
+.training{
+	width:600px;
+	text-align:center;
+	color:@TextOnWhite;
+	table{
+		width:600px;
+		background-color:@darkbg;
+		border-radius:10px;
+		color:@lightbg;
+		border-spacing:0;
+		text-align:left;
+		font-weight:lighter;
+		padding:10px 0;
+		margin:10px 0;
+		td{
+			padding:10px 15px;
+		}
+		td:nth-child(1){
+			width:400px;
+		}
+		td:nth-child(2){
+			width:100px;
+		}
+		tr:nth-child(2n) {
+			background: @TextOnWhite;
+			
+
+		}
+		tr:last-child{
+			border-radius:10px;
+		}	
+	
+	}
+}
+.almost-basic-block{
+	padding: 100px 0;
 }
