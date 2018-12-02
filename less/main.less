@@ -1,5 +1,6 @@
 @highlight: #5472e3;
 @lightbg: #f5f5f5;
+@lighterbg: white;
 @darkbg: #343a40;
 @evendarkerbg: #23292f;
 @TextOnWhite:#777777;
@@ -25,7 +26,7 @@ header {
 }
 
 p{
-	font-weight:lighter;
+	font-weight:300;
 }
 
 .header-panel {
@@ -69,6 +70,8 @@ p{
 	height:100%;	
 }
 .header-text{
+	font-size: 12px;
+	font-weight: 500;
 	text-decoration: none;
 	color: white;
 }
@@ -78,22 +81,29 @@ p{
 	width: 250px;
 }
 .header-phone {
+	padding-top: 9px;
 	left: 320px;
-	width: 290px;
+	width: 185px;
 }
 .header-nav {
+	position: absolute;
+	right: 20px;
 	z-index: 2 !important;
 	display: flex;
 	justify-content: flex-end;
-	width: 100%;
+	//width: 100%;
 }
 .header-nav>div {
-	margin-right: 80px;
+	margin-right: 20px;
 }
 
 .header-nav>div>a:hover {
 	cursor:	pointer;
 	color: @highlight !important;
+}
+
+a{
+	font-weight: 300;
 }
 
 main{
@@ -168,23 +178,33 @@ main{
 	p{
 		color:@lightbg;
 	}
-	width:100vw;
+	//width:100vw;
+	@media (min-width: 1200px){
+		padding-bottom: 10px;
+	}
 }
 
 .separator{
-	display: inline-block;
+	display: block;
 	height: 2px;
-	margin: 50px;
+	margin: 0 100px 50px 100px;
+	left: 50%;
+	transform: translateX(-100%);
 	width: 200px;
 	background-color: @highlight;
 }
-
-.sep-hor{
-	top: 90px;
-	margin: 0 50px;
-	width: 2px;
-	height: 200px;
+@media (min-width: 1200px){
+	.sep-hor{
+		display: inline-block;
+		position: absolute;
+		left: 0; transform: none;
+		top: 190px;
+		margin: 0 30px;
+		width: 2px;
+		height: 200px;
+	}
 }
+
 
 .about-list{
 	display: inline-block;
@@ -192,6 +212,9 @@ main{
 	list-style: none;
 }
 
+.about-list>li{
+	font-weight: 300;
+}
 .about-list>li::before {
 	content: "●"; color: @highlight;
 	//font-size: 50px;
@@ -218,8 +241,22 @@ footer{
 	width: 500px;
 	height: 400px;
 	text-align: center;
-	padding-top: 185px;
+	//padding-top: 185px;
 	background-color: @lightbg;
+}
+
+.contact-form{
+	display: inline-block;
+	position: relative;
+	z-index: 10;
+	vertical-align:top;
+}
+
+.contact-map{
+	display: inline-block;
+	position: relative;
+	z-index: 10;
+	vertical-align:top;
 }
 
 #tempPlane{
@@ -249,47 +286,90 @@ footer{
 .flexcol{
 	flex-direction:column;
 }
-.aandopen{
-	width:100vw;
-	background-color:@lightbg;
-	box-shadow: 0 0 20px black;
+.openList{
 	margin:20px 0;
-	font-size:30px
+	overflow: hidden;
+	box-shadow: 0 0 20px rgba(0,0,0,0.3);
 }
-.training{
-	width:600px;
-	text-align:center;
-	color:@TextOnWhite;
-	table{
-		width:600px;
-		background-color:@darkbg;
-		border-radius:10px;
-		color:@lightbg;
-		border-spacing:0;
-		text-align:left;
-		font-weight:lighter;
-		padding:10px 0;
-		margin:10px 0;
-		td{
-			padding:10px 15px;
-		}
-		td:nth-child(1){
-			width:400px;
-		}
-		td:nth-child(2){
-			width:100px;
-		}
-		tr:nth-child(2n) {
-			background: @TextOnWhite;
-			
+.aandopen{
+	user-select: none;
+	cursor: pointer;
+	height: 50px;
+	padding-top: 10px;
+	width:100%;
+	background-color:@lightbg;
+	border-top: 2px solid rgba(0, 0, 0, 0.1);
+	border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+	font-size:30px;
+}
 
-		}
-		tr:last-child{
+.training{
+	text-align: center;
+	background-color: @lightbg;
+	box-shadow: 0 0 20px rgba(0,0,0,0.5) inset;
+	div{
+		display: inline-block;
+		width:600px;
+		margin-top: 20px;
+		text-align:center;
+		color:@TextOnWhite;
+		margin-bottom: 20px;
+		table{
+			width:600px;
+			background-color:@darkbg;
 			border-radius:10px;
-		}	
-	
+			color:@lightbg;
+			border-spacing:0;
+			text-align:left;
+			font-weight:300;
+			//padding:10px 0;
+			overflow: hidden;
+			margin:10px 0;
+			td{
+				padding:10px 15px;
+			}
+			td:nth-child(1){
+				width:400px;
+			}
+			td:nth-child(2){
+				width:100px;
+			}
+			tr:nth-child(2n) {
+				background: @TextOnWhite;
+			}
+			tr:last-child{
+				border-radius:10px;
+			}	
+		
+		}
 	}
 }
+
 .almost-basic-block{
+	background-color: @lighterbg;
 	padding: 100px 0;
+}
+.trLink{
+	z-index: 5;
+	position:absolute;
+	margin: 0 auto;
+	left: 50%;
+	top: 30%;
+	transform: translateX(-50%);
+	//transform: translateY(-50%);
+	text-align:center;
+}
+
+.trLink>h1>a{
+	color: white;
+	font-weight: 700;
+	text-decoration: none;
+	font-size: 48px;
+}
+
+.trLink>p{
+	font-size: 20px;
+	color: white;
+	opacity: 0.7;
+	font-weight: 300;
 }

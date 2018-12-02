@@ -16,7 +16,7 @@ header {
   overflow: hidden;
 }
 p {
-  font-weight: lighter;
+  font-weight: 300;
 }
 .header-panel {
   position: fixed;
@@ -55,6 +55,8 @@ p {
   height: 100%;
 }
 .header-text {
+  font-size: 12px;
+  font-weight: 500;
   text-decoration: none;
   color: white;
 }
@@ -63,21 +65,26 @@ p {
   width: 250px;
 }
 .header-phone {
+  padding-top: 9px;
   left: 320px;
-  width: 290px;
+  width: 185px;
 }
 .header-nav {
+  position: absolute;
+  right: 20px;
   z-index: 2 !important;
   display: flex;
   justify-content: flex-end;
-  width: 100%;
 }
 .header-nav > div {
-  margin-right: 80px;
+  margin-right: 20px;
 }
 .header-nav > div > a:hover {
   cursor: pointer;
   color: #5472e3 !important;
+}
+a {
+  font-weight: 300;
 }
 main {
   position: relative;
@@ -128,7 +135,6 @@ main {
 .bb-black {
   background: #343a40;
   position: relative;
-  width: 100vw;
 }
 .bb-black .triangles-left {
   transform: scaleY(-1);
@@ -141,23 +147,39 @@ main {
 .bb-black p {
   color: #f5f5f5;
 }
+@media (min-width: 1200px) {
+  .bb-black {
+    padding-bottom: 10px;
+  }
+}
 .separator {
-  display: inline-block;
+  display: block;
   height: 2px;
-  margin: 50px;
+  margin: 0 100px 50px 100px;
+  left: 50%;
+  transform: translateX(-100%);
   width: 200px;
   background-color: #5472e3;
 }
-.sep-hor {
-  top: 90px;
-  margin: 0 50px;
-  width: 2px;
-  height: 200px;
+@media (min-width: 1200px) {
+  .sep-hor {
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    transform: none;
+    top: 190px;
+    margin: 0 30px;
+    width: 2px;
+    height: 200px;
+  }
 }
 .about-list {
   display: inline-block;
   text-align: left;
   list-style: none;
+}
+.about-list > li {
+  font-weight: 300;
 }
 .about-list > li::before {
   content: "●";
@@ -181,8 +203,19 @@ footer {
   width: 500px;
   height: 400px;
   text-align: center;
-  padding-top: 185px;
   background-color: #f5f5f5;
+}
+.contact-form {
+  display: inline-block;
+  position: relative;
+  z-index: 10;
+  vertical-align: top;
+}
+.contact-map {
+  display: inline-block;
+  position: relative;
+  z-index: 10;
+  vertical-align: top;
 }
 #tempPlane {
   width: 100%;
@@ -209,47 +242,83 @@ footer {
 .flexcol {
   flex-direction: column;
 }
-.aandopen {
-  width: 100vw;
-  background-color: #f5f5f5;
-  box-shadow: 0 0 20px black;
+.openList {
   margin: 20px 0;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+.aandopen {
+  user-select: none;
+  cursor: pointer;
+  height: 50px;
+  padding-top: 10px;
+  width: 100%;
+  background-color: #f5f5f5;
+  border-top: 2px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
   font-size: 30px;
 }
 .training {
+  text-align: center;
+  background-color: #f5f5f5;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5) inset;
+}
+.training div {
+  display: inline-block;
   width: 600px;
+  margin-top: 20px;
   text-align: center;
   color: #777777;
+  margin-bottom: 20px;
 }
-.training table {
+.training div table {
   width: 600px;
   background-color: #343a40;
   border-radius: 10px;
   color: #f5f5f5;
   border-spacing: 0;
   text-align: left;
-  font-weight: lighter;
-  padding: 10px 0;
+  font-weight: 300;
+  overflow: hidden;
   margin: 10px 0;
 }
-.training table td {
+.training div table td {
   padding: 10px 15px;
 }
-.training table td:nth-child(1) {
+.training div table td:nth-child(1) {
   width: 400px;
 }
-.training table td:nth-child(2) {
+.training div table td:nth-child(2) {
   width: 100px;
 }
-.training table tr:nth-child(2n) {
-  background: grey;
-  border: 1px solid white;
-  border-radius: 10px;
+.training div table tr:nth-child(2n) {
+  background: #777777;
 }
-.training table tr:last-child {
+.training div table tr:last-child {
   border-radius: 10px;
 }
 .almost-basic-block {
+  background-color: #ffffff;
   padding: 100px 0;
 }
-/*# sourceMappingURL=main.css.map */
+.trLink {
+  z-index: 5;
+  position: absolute;
+  margin: 0 auto;
+  left: 50%;
+  top: 30%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+.trLink > h1 > a {
+  color: white;
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 48px;
+}
+.trLink > p {
+  font-size: 20px;
+  color: white;
+  opacity: 0.7;
+  font-weight: 300;
+}
