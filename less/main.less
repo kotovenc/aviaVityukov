@@ -18,9 +18,11 @@ html{
 header {
 	position: relative;
 	z-index: 5;
+	z-index: 5;
 	box-sizing: border-box;
 	width: 100%;
-	height: 100vh;
+	height: 85px;
+	margin-bottom:-85px;
 	background-color: #434344;
 	overflow: hidden;
 }
@@ -28,7 +30,6 @@ header {
 p{
 	font-weight:300;
 }
-
 .header-panel {
 	position: fixed;
 	z-index: 2;
@@ -50,7 +51,7 @@ p{
 .header-slider{
 	position: absolute;
 	width: 100%;
-	z-index: 1;
+	z-index: 0;
 }
 
 .header-panel> div{
@@ -76,11 +77,39 @@ p{
 	color: white;
 }
 
+.header-slider{
+	position: absolute;
+	width: 100%;
+	z-index: 1;
+}
+
+.header-panel> div{
+	position: absolute;
+	z-index: 3;
+}
+
+.header-panel-bg{
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.75);
+	z-index: 1 !important;
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	background-color: white;
+	width:100%;
+	height:100%;	
+}
+.header-text{
+	text-decoration: none;
+	color: white;
+}
+
 .header-logo>img {
 	height: 40px;
 	width: 250px;
 }
 .header-phone {
+
 	padding-top: 9px;
 	left: 320px;
 	width: 185px;
@@ -113,6 +142,9 @@ main{
 
 .basic-block {
 	box-sizing: border-box;
+	position: relative;
+	top: 100vh;
+	z-index: 2;
 	//position: absolute;
 	width: 100%;
 	//height: 100vh;
@@ -125,7 +157,6 @@ main{
 	position: relative;
 	z-index: 2;	
 }
-
 .about-text{
 
 	position: relative;
@@ -393,3 +424,4 @@ footer{
 	color: @lighterbg;
 
 }
+
