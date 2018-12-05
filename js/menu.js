@@ -53,6 +53,7 @@ $('.menu-icon').click(function(){
     }
 });
 
+
 $(document).click(function(){
     if (every_second_click == 2) {
         $(".menu-hidden").animate({left: '-100%'},500);
@@ -62,11 +63,3 @@ $(document).click(function(){
         every_second_click++;
     }
 });
-function closeopen( id )
-    /*Для создания раскрывающихся по клику кнопочек*/
-    {
-     element = document.getElementById( id );
-          if( element )   
-             element.style.display = element.style.display == "none" ? "" : "none";   
-}
-   
