@@ -71,14 +71,10 @@ p {
 }
 .header-nav {
   position: absolute;
-  right: 0;
-  top: 0;
-  height: 100%;
-  width: 100%;
+  right: 20px;
   z-index: 2 !important;
   display: flex;
   justify-content: flex-end;
-  text-align: right;
 }
 .header-nav > div {
   margin-right: 20px;
@@ -104,18 +100,11 @@ main {
   position: relative;
   z-index: 2;
 }
-/* Я поменял немного
-.about-text{
-
-	position: relative;
-	z-index: 2;
-	display: inline-block;
-	width: 80%;
-}*/
 .about-text {
   position: relative;
   z-index: 2;
   display: inline-block;
+  width: 80%;
 }
 .triangles {
   z-index: 1 !important;
@@ -143,10 +132,6 @@ main {
 .bb-white .triangles-right {
   transform: scaleX(-1);
 }
-.bb-white .p400 {
-  color: #343a40;
-  max-width: 400px;
-}
 .bb-black {
   background: #343a40;
   position: relative;
@@ -159,11 +144,7 @@ main {
   transform: scaleX(-1);
   filter: invert(100%);
 }
-.bb-black .p400 {
-  color: #f5f5f5;
-  max-width: 400px;
-}
-.bb-black h1 {
+.bb-black p {
   color: #f5f5f5;
 }
 @media (min-width: 1200px) {
@@ -196,10 +177,6 @@ main {
   display: inline-block;
   text-align: left;
   list-style: none;
-  padding-left: 20px;
-}
-.about-list > li {
-  font-weight: 300;
 }
 .about-list > li {
   font-weight: 300;
@@ -252,221 +229,78 @@ footer {
   background-color: black;
   opacity: 0.75;
 }
-.trLink {
-  z-index: 5;
-  position: absolute;
-  margin: 0 auto;
-  left: 50%;
-  top: 30%;
-  transform: translateX(-50%);
-  text-align: center;
+/*********************training***************************/
+.darktext {
+  color: #343a40;
 }
-.trLink > h1 > a {
-  color: white;
-  font-weight: 700;
-  text-decoration: none;
-  font-size: 48px;
+.flex {
+  display: flex;
+  padding: 20px;
 }
-.trLink > p {
-  font-size: 20px;
-  color: white;
-  opacity: 0.7;
-  font-weight: 300;
+.flex p {
+  flex: 2 200px;
 }
-.footer-contact {
-  position: absolute;
-  right: 20px;
-  top: 10px;
-  text-align: right;
+.flexcol {
+  flex-direction: column;
 }
-
-.copyright {
-  position: absolute;
-  left: 50%;
-  top: 35px;
-  transform: translateX(-50%);
-}
-.footer-text {
-  color: #ffffff;
-}
-/*********************TRAINING BLOCK***************************/
-
 .openList {
   margin: 20px 0;
   overflow: hidden;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
 }
-.text_dark {
-  color: #777777;
-}
-.text_light {
-  color: #ffffff;
-}
-.aandopen_light {
+.aandopen {
   user-select: none;
   cursor: pointer;
   height: 50px;
   padding-top: 10px;
   width: 100%;
-  background-color: #e8e8e8;
+  background-color: #f5f5f5;
   border-top: 2px solid rgba(0, 0, 0, 0.1);
   border-bottom: 2px solid rgba(0, 0, 0, 0.1);
   font-size: 30px;
-  color: #171717;
 }
-.aandopen_dark {
-  user-select: none;
-  cursor: pointer;
-  height: 50px;
-  padding-top: 10px;
-  width: 100%;
-  background-color: #292d32;
-  border-top: 2px solid rgba(0, 0, 0, 0.1);
-  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
-  font-size: 30px;
-  color: #d6d2cd;
-}
-.training_light {
+.training {
   text-align: center;
   background-color: #f5f5f5;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.5) inset;
 }
-.training_light .p300 {
-  width: 240px;
-}
-.training_light div {
+.training div {
   display: inline-block;
-  width: 750px;
+  width: 600px;
   margin-top: 20px;
   text-align: center;
   color: #777777;
   margin-bottom: 20px;
 }
-.training_light div table {
-  width: 750px;
+.training div table {
+  width: 600px;
   background-color: #343a40;
   border-radius: 10px;
-  color: #ffffff;
+  color: #f5f5f5;
   border-spacing: 0;
-  text-align: center;
+  text-align: left;
   font-weight: 300;
   overflow: hidden;
   margin: 10px 0;
 }
-.training_light div table th {
-  padding: 10px 5px;
-  text-align: center;
+.training div table td {
+  padding: 10px 15px;
 }
-.training_light div table td {
-  padding: 10px 10px;
+.training div table td:nth-child(1) {
+  width: 400px;
 }
-.training_light div table td:nth-child(2) {
-  text-align: left;
+.training div table td:nth-child(2) {
+  width: 100px;
 }
-.training_light div table td:nth-child(1) {
-  text-align: left;
-}
-.training_light div table td:last-child {
-  min-width: 100px;
-}
-.training_light div table tr:nth-child(2n) {
+.training div table tr:nth-child(2n) {
   background: #777777;
 }
-.training_light div table .liketh {
-  background: #777777;
-}
-.training_light .nolimit {
-  width: auto;
-  text-align: center;
-}
-.training_light .nolimit div {
-  width: auto;
-}
-.training_dark {
-  text-align: center;
-  background-color: #343a40;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5) inset;
-}
-.training_dark .p300 {
-  width: 240px;
-}
-.training_dark div {
-  /* display: inline-block; */
-  width: 750px;
-  margin-top: 20px;
-  text-align: center;
-  color: #ffffff;
-  margin-bottom: 20px;
-}
-.training_dark div table {
-  width: 750px;
-  background-color: #f5f5f5;
+.training div table tr:last-child {
   border-radius: 10px;
-  color: black;
-  border-spacing: 0;
-  text-align: center;
-  font-weight: 300;
-  overflow: hidden;
-  margin: 10px 0;
-}
-.training_dark div table th {
-  padding: 10px 5px;
-  text-align: center;
-}
-.training_dark div table td {
-  padding: 10px 10px;
-}
-.training_dark div table td:nth-child(2) {
-  text-align: left;
-}
-.training_dark div table td:nth-child(1) {
-  text-align: left;
-}
-.training_dark div table td:last-child {
-  min-width: 100px;
-}
-.training_dark div table tr:nth-child(2n) {
-  background: #777777;
-}
-.training_dark div table .liketh {
-  background: #777777;
-}
-.training_dark .nolimit {
-  width: auto;
-  text-align: center;
-}
-.training_dark .nolimit div {
-  width: auto;
-}
-.flex {
-  display: flex;
-  padding: 20px;
-  justify-content: space-around;
-}
-.flex p {
-  flex: 2 200px;
-  padding: 20px 20px;
-}
-.flex div {
-  text-align: left;
-}
-.flex div p {
-  padding: 4px 20px;
-}
-.flexcol {
-  flex-direction: column;
-  align-items: center;
-}
-.sponsors .flex {
-  padding: 0 10px;
-  margin: 0;
-  justify-content: space-around;
-}
-.sponsors .flex div {
-  text-align: center;
 }
 .almost-basic-block {
-  padding: 100px 0 0 0;
+  background-color: #ffffff;
+  padding: 100px 0;
 }
 .trLink {
   z-index: 5;
@@ -503,94 +337,4 @@ footer {
 }
 .footer-text {
   color: #ffffff;
-}
-body ul li {
-  list-style-type: none;
-}
-.nav {
-  display: inline-block;
-  width: 100%;
-  height: 85px;
-  position: fixed;
-  z-index: 10;
-  clear: both;
-}
-ul#menu {
-  position: relative;
-  z-index: 5;
-  display: none;
-  margin: 85px 0 0 0;
-  width: 100%;
-}
-ul#menu li a {
-  width: 200px;
-  display: inline-block;
-  background-color: #ffffff;
-  height: 1em;
-  padding: 1.5em 1.6em;
-  transition: background 0.2s;
-  text-decoration: none;
-}
-ul#menu a:hover {
-  color: #5472e3 !important;
-}
-@media screen and (min-width: 1280px) {
-  .hamburger-container {
-    display: none;
-  }
-  .nav ul#menu {
-    display: inline;
-    text-align: left;
-  }
-  .nav ul#menu li {
-    display: inline-block;
-    margin-right: -5px;
-  }
-  ul#menu li a {
-    margin-top: 20px;
-    width: 100%;
-  }
-}
-ul.hamburger li {
-  height: 5px;
-  background: #000;
-  content: "";
-  position: relative;
-  transition: 0.25s ease-in-out;
-}
-.hidden {
-  opacity: 0;
-}
-.rot45deg {
-  transform: rotate(45deg);
-  top: 10px !important;
-}
-.rot-45deg {
-  transform: rotate(-45deg);
-}
-ul.hamburger {
-  display: block;
-}
-ul.hamburger li:nth-child(1) {
-  top: 0;
-}
-ul.hamburger li:nth-child(2) {
-  top: 5px;
-}
-ul.hamburger li:nth-child(3) {
-  top: 10px;
-}
-.hamburger-container {
-  position: relative;
-  z-index: 2;
-  width: 38px;
-  margin: 1.2em 1.6em;
-  height: 30px;
-  cursor: pointer;
-  float: right;
-}
-@media screen and (max-width: 600px) {
-  .header-phone {
-    display: none;
-  }
 }
