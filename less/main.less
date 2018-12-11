@@ -118,6 +118,7 @@ main{
 	//height: 100vh;
 	text-align: center;
 	padding: 100px 20px;
+
 	//
 }
 
@@ -125,15 +126,21 @@ main{
 	position: relative;
 	z-index: 2;	
 }
-
+/* Я поменял немного
 .about-text{
 
 	position: relative;
 	z-index: 2;
 	display: inline-block;
 	width: 80%;
-}
+}*/
 
+.about-text{
+	position: relative;
+	z-index: 2;
+	display: inline-block;
+	//width: 80%;
+}
 .triangles{
 	z-index: 1 !important;
 	display: block;
@@ -162,6 +169,10 @@ main{
 	.triangles-right{
 	    transform: scaleX(-1);
 	}
+	.p400{
+		color:@darkbg;
+		max-width:400px;
+	}
 }
 
 .bb-black{
@@ -175,7 +186,11 @@ main{
 		transform: scaleX(-1);
 		filter: invert(100%);
 	}
-	p{
+	.p400{
+		color:@lightbg;
+		max-width:400px;
+	}
+	h1{
 		color:@lightbg;
 	}
 	//width:100vw;
@@ -210,6 +225,7 @@ main{
 	display: inline-block;
 	text-align: left;
 	list-style: none;
+	padding-left:20px;
 }
 
 .about-list>li{
@@ -272,92 +288,6 @@ footer{
 	background-color: black;
 	opacity: 0.75;
 }
-/*********************training***************************/
-.darktext{
-	color:@darkbg;
-}
-
-.flex{
-	display:flex;
-	padding:20px;
-	p{
-  		flex: 2 200px;
-	}	
-}
-.flexcol{
-	flex-direction:column;
-}
-.openList{
-	margin:20px 0;
-	overflow: hidden;
-	box-shadow: 0 0 20px rgba(0,0,0,0.3);
-}
-.aandopen{
-	user-select: none;
-	cursor: pointer;
-	height: 50px;
-	padding-top: 10px;
-	width:100%;
-	background-color:@lightbg;
-	border-top: 2px solid rgba(0, 0, 0, 0.1);
-	border-bottom: 2px solid rgba(0, 0, 0, 0.1);
-	font-size:30px;
-}
-
-.training{
-	text-align: center;
-	background-color: @lightbg;
-	box-shadow: 0 0 20px rgba(0,0,0,0.5) inset;
-	div{
-		display: inline-block;
-		width:600px;
-		margin-top: 20px;
-		text-align:center;
-		color:@TextOnWhite;
-		margin-bottom: 20px;
-		table{
-			width:600px;
-			background-color:@darkbg;
-			border-radius:10px;
-			color:@lightbg;
-			border-spacing:0;
-			text-align:left;
-			font-weight:300;
-			//padding:10px 0;
-			overflow: hidden;
-			margin:10px 0;
-			th{
-				padding:10px 5px;
-				text-align:center;
-			}
-			td{
-				padding:10px 10px;
-			}
-			td:nth-child(1){
-				width:400px;
-			}
-			td:nth-child(2){
-				width:100px;
-			}
-			tr:nth-child(2n) {
-				background: @TextOnWhite;
-			}
-			tr:last-child{
-				border-radius:10px;
-			}	
-			.liketh{
-				background: @TextOnWhite;
-
-			}
-		
-		}
-	}
-}
-
-.almost-basic-block{
-	background-color: @lighterbg;
-	padding: 100px 0;
-}
 .trLink{
 	z-index: 5;
 	position:absolute;
@@ -399,5 +329,173 @@ footer{
 
 .footer-text{
 	color: @lighterbg;
-
 }
+
+/*********************TRAINING BLOCK***************************/
+.openList{
+	margin:20px 0;
+	overflow: hidden;
+	box-shadow: 0 0 20px rgba(0,0,0,0.3);
+}
+
+
+
+/////////COLORS FOR TEXT
+.text(@color){
+	color:@color;
+}
+.text_dark{
+	.text(@TextOnWhite);
+}
+.text_light{
+	.text(white);
+}
+///////COLORS FOR DROPDOWN PANEL
+.aandopen(@color){
+	user-select: none;
+	cursor: pointer;
+	height: 50px;
+	padding-top: 10px;
+	width:100%;
+	background-color:@color;
+	border-top: 2px solid rgba(0, 0, 0, 0.1);
+	border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+	font-size:30px;
+	color:#fff-@color;
+}
+.aandopen_light{
+	.aandopen(darken(@lightbg,5%));
+}
+.aandopen_dark{
+	.aandopen(darken(@darkbg,5%));
+}
+
+///////COLORS FOR DROPDOWN INFO
+
+.training(@MainColor,@SecondaryColor){
+	text-align: center;
+	background-color: @MainColor;
+
+	.p300{
+	width:240px;
+	}
+	
+	
+
+	box-shadow: 0 0 20px rgba(0,0,0,0.5) inset;
+	div{
+		display: inline-block;
+		width:750px;
+		margin-top: 20px;
+		text-align:center;
+		& when (@MainColor = @darkbg) 
+			{
+			.text_light();
+    	}
+		& when (@MainColor = @lightbg) 
+			{
+			.text_dark();
+    	}
+		
+		margin-bottom: 20px;
+		
+		table{
+			width:750px;
+			background-color:@SecondaryColor;
+			border-radius:10px;
+			
+			& when (@MainColor = @darkbg) 
+				{
+				color:black;
+    		}
+			& when (@MainColor = @lightbg) 
+				{
+				.text_light();
+    		}
+			border-spacing:0;
+			text-align:center;
+			font-weight:300;
+			overflow: hidden;
+			margin:10px 0;
+			th{
+				padding:10px 5px;
+				text-align:center;
+			}
+			td{
+				padding:10px 10px;
+			}
+			td:nth-child(2) {
+				text-align:left;
+			}
+			td:nth-child(1) {
+				text-align:left;
+			}
+			td:last-child{
+				min-width:100px;
+			}
+			tr:nth-child(2n) {
+				background: @TextOnWhite;
+			}
+			
+			.liketh{
+				background: @TextOnWhite;
+			}		
+		} 
+		
+	}
+	.nolimit{
+			width:auto;
+			text-align:center;
+			div{
+				width:auto;
+			}
+	}
+}
+
+.training_light{
+	.training(@lightbg,@darkbg);
+}
+.training_dark{
+	.training(@darkbg,@lightbg);
+}
+
+////////POSITION (FLEX)
+.flex{
+	display:flex;
+	padding:20px;
+	justify-content:space-around;
+	p{
+  		flex: 2 200px;
+  		padding:20px 20px;
+	}
+	div{
+		text-align:left;
+		p{
+			padding:4px 20px;
+		}
+	}
+
+	justify-content:space-around;	
+}
+.flexcol{
+	flex-direction:column;
+	align-items:center;
+}
+.sponsors{
+	.flex{
+		padding:0 10px;
+		margin:0;
+		justify-content:space-around;
+
+		div{
+			text-align:center;
+		}
+	}
+}
+
+
+.almost-basic-block{
+	//background-color: @lighterbg;
+	padding: 100px 0 0 0;
+}
+
