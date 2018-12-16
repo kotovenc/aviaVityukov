@@ -201,9 +201,6 @@ main {
 .about-list > li {
   font-weight: 300;
 }
-.about-list > li {
-  font-weight: 300;
-}
 .about-list > li::before {
   content: "●";
   color: #5472e3;
@@ -279,7 +276,6 @@ footer {
   top: 10px;
   text-align: right;
 }
-
 .copyright {
   position: absolute;
   left: 50%;
@@ -290,7 +286,6 @@ footer {
   color: #ffffff;
 }
 /*********************TRAINING BLOCK***************************/
-
 .openList {
   margin: 20px 0;
   overflow: hidden;
@@ -391,7 +386,7 @@ footer {
   width: 240px;
 }
 .training_dark div {
-  /* display: inline-block; */
+  display: inline-block;
   width: 750px;
   margin-top: 20px;
   text-align: center;
@@ -408,6 +403,9 @@ footer {
   font-weight: 300;
   overflow: hidden;
   margin: 10px 0;
+}
+.training_dark div table tr:nth-child(2n) {
+  color: #ffffff;
 }
 .training_dark div table th {
   padding: 10px 5px;
