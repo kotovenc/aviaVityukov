@@ -239,6 +239,9 @@ footer {
   z-index: 10;
   vertical-align: top;
 }
+.contact-map > p {
+  color: white;
+}
 #tempPlane {
   width: 100%;
   height: 100%;
@@ -541,11 +544,12 @@ body ul li {
   clear: both;
 }
 ul#menu {
-  position: relative;
+  position: absolute;
   z-index: 5;
   display: none;
   margin: 85px 0 0 0;
-  width: 100%;
+  width: 200px;
+  right: 40px;
 }
 ul#menu li a {
   width: 200px;
@@ -566,6 +570,8 @@ ul#menu a:hover {
   .nav ul#menu {
     display: inline;
     text-align: left;
+    width: 100%;
+    position: relative;
   }
   .nav ul#menu li {
     display: inline-block;
