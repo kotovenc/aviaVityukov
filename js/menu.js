@@ -1,3 +1,7 @@
+$( document ).ready(function() {
+    $('#menu').css("background-color", "rgba(0,0,0,0)");
+});
+
 $(window).scroll(function () {
     if($(window).scrollTop() > 50){
         $('.header-panel-bg').stop().animate({
