@@ -118,6 +118,9 @@ body ul li {
   z-index: 2;
   display: inline-block;
 }
+.about-text-center {
+  width: 750px;
+}
 .triangles {
   z-index: 1 !important;
   display: block;
@@ -457,6 +460,7 @@ ul.hamburger li:nth-child(3) {
 .training-light div {
   display: inline-block;
   width: 750px;
+  /*КОРЕНЬ ВСЕГО КОМПАНОВОЧНОГО ЗЛА ЗАРЫТ ЗДЕСЬ!*/
   margin-top: 20px;
   text-align: center;
   color: #777777;
@@ -513,6 +517,7 @@ ul.hamburger li:nth-child(3) {
 .training-dark div {
   display: inline-block;
   width: 750px;
+  /*КОРЕНЬ ВСЕГО КОМПАНОВОЧНОГО ЗЛА ЗАРЫТ ЗДЕСЬ!*/
   margin-top: 20px;
   text-align: center;
   color: white;
@@ -567,8 +572,20 @@ ul.hamburger li:nth-child(3) {
   justify-content: space-around;
 }
 .flex p {
-  flex: 2 200px;
   padding: 20px 20px;
+}
+.flex img {
+  width: 450px;
+  height: 300px;
+}
+.flex img.layout {
+  width: auto;
+  height: auto;
+}
+@media (max-width: 940px) {
+  .flex img.layout {
+    width: 98vw;
+  }
 }
 .flex div {
   text-align: left;
@@ -607,7 +624,12 @@ ul.hamburger li:nth-child(3) {
   width: 450px;
   height: 300px;
 }
-@media screen and (max-width: 1240px) {
+@media (max-width: 950px) {
+  .pictures .up {
+    display: none;
+  }
+}
+@media (max-width: 1240px) {
   .pictures img {
     width: 300px;
     height: 150px;
