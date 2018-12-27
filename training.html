@@ -16,7 +16,7 @@
 					<img src="img/header-logo.png">
 				</div>
 				<div class="header-phone">
-					<p class="header-text text_dark">+7 (495) 710-99-60 (Доб. 335)</p>
+					<p class="header-text text-dark">+7 (495) 710-99-60 (Доб. 335)</p>
 				</div>
 				<div class="header-nav">
 					<nav class="nav">
@@ -31,19 +31,26 @@
 					  
 					  <ul id="menu">
 					    <li>
-							<a href="main.html" class="header-text text_dark" >ГЛАВНАЯ</a>
+							<a href="main.html" class="header-text text-dark menu-link" >ГЛАВНАЯ</a>
 						</li>
 						<li>
-							<a href="#main" class="header-text text_dark">ТРЕНАЖЕРЫ</a>
+							<div class="dropdown dropbtn header-text text-dark menu-link">
+							  ТРЕНАЖЕРЫ
+							  <div class="dropdown-content">
+							    <a href="#">Link 1</a>
+							    <a href="#">Link 2</a>
+							    <a href="#">Link 3</a>
+							  </div>
+							</div>
 						</li>
 						<li>
-							<a href="#obuch" class="header-text text_dark">ОБУЧЕНИЕ</a>
+							<a href="#obuch" class="header-text text-dark menu-link">ОБУЧЕНИЕ</a>
 						</li>
 						<li>
-							<a href="#" class="header-text text_dark">О САМОЛЕТЕ</a>
+							<a href="#plane" class="header-text text-dark menu-link">О САМОЛЕТЕ</a>
 						</li>
 						<li>
-							<a href="#" class="header-text text_dark">КАРТА</a>
+							<a href="#contact" class="header-text text-dark menu-link">КАРТА</a>
 						</li>
 					  </ul>
 
@@ -78,14 +85,57 @@
 				<p class="p400">Комплексный (Full Flight Simulator - FFS) тренажер - это пилотажный тренажер, который имеет систему подвижности, имитирующую полет самолета, оборудован кабиной полностью соответствующей кабине пилотов реального воздушного судна, имеет совершенную систему визуализации и предназначен для отработки комплексных навыков выполнения полетов.	
 				</p>
 			</div>
+			<div class="basic-block bb-white">
+				<div class="about-text ">
+					<h1>Тренажер аварийно-спасательной подготовки</h1>
+					<br>
+					<br>
+					<br>	
+					<div class="flex">
+						<p class="p400"> Ежегодная аварийно-спасательная подготовка проводится на базе макета воздушного судна Ан-148. Отрабатываются навыки оперирования дверью (door training); slide training, CEET (cabin emergency evacuation training) - проведение аварийно спасательной эвакуации с использованием аварийно-спасательного оборудования. </p>
+						<img src="img/Tumb_TBP.png">
+					</div>
+					<br>
+					
+				</div>
+				<br>
+			</div>
+			<div class="basic-block bb-black flex flexcol">
+				<div class="pictures">
+					<img src="img/temp2.jpg">
+					<img src="img/temp.jpg" class="up
+					">
+					<img src="img/temp3.jpg">
+				</div>
+				<br>
+				<br>
+				<p class="p400">  Водная аварийно-спасательная подготовка проводится в специально оборудованном бассейне на базе Учебного Центра С7 Тренинг – отработка навыков оказание помощи людям в воде, выживания в водном пространстве, приемов сохранения тепла и энергии.
+				</p>
+			</div>
+			<div class="basic-block bb-white flex flexcol">
+				<br>
+				<br>
+				<br>
+				<p class="p400"> Неотъемлемая часть аварийно-спасательной подготовки – совместные тренинги кабинных и летных экипажей - отработка взаимодействия между пилотами и бортпроводниками. Во время тренингов отрабатываются навыки самостоятельного принятия решений: что делать, если летный экипаж вышел из строя полностью или частично, как самостоятельно проводить эвакуацию, что делать в условиях автономного выживания, групповое и индивидуальное выживание в неизвестной и малоизвестной климато-географической местности (Арктика, пустыня, тропики, джунгли, водное пространство)
+				</p>
+				<br>
+				<br>
+			</div>
+			<div class="basic-block bb-black flex flexcol">
+				<br>
+				<br>
+				<br>
+				<p class="p400">  Практическое обучение проводится в специализированных классах, занятия по медицине проводятся на профильных тренажерах. Преподаватели в области подготовки кабинных экипажей - сертифицированные специалисты-практики. 
+				</p>
+			</div>
 			<a id="obuch"></a>
 			<div class="basic-block bb-white almost-basic-block">
 				<div class="about-text ">
 					<h1>Обучение</h1>
 				</div>
 				<div class="openList">
-					<div class="aandopen_light"  onclick="closeopen('crew')" >Летный состав </div>
-					<div id="crew" style="display: none;" class="training_light">
+					<div class="aandopen-light"  onclick="closeopen('crew')" >Летный состав </div>
+					<div id="crew" style="display: none;" class="training-light">
 						<div class="about-text">
 			           		Переобучение/переподготовка пилотов (летных экипажей) на самолет Ан-148 проводится с продолжительностью:
 
@@ -170,8 +220,8 @@
 
 
 
-					<div class="aandopen_light"  onclick="closeopen('crew1')" >Бортпроводники </div>
-					<div id="crew1" style="display: none;" class="training_light">
+					<div class="aandopen-light"  onclick="closeopen('crew1')" >Бортпроводники </div>
+					<div id="crew1" style="display: none;" class="training-light">
 						<div class="about-text ">
 			           		<div>Курс переподготовки бортпроводников на воздушное судно Ан-148:</div>
 			           		<table class="table">
@@ -358,8 +408,8 @@
 									<br><li>*Продолжительность подготовки по Курсам повышения квалификации летного состава на ВС Ан-148 может быть изменена в случае с внедрением дистанционных образовательных технологий.</li></ul>
 						</div>
 					</div>
-					<div class="aandopen_light"  onclick="closeopen('crew2')" >Инженерно-технический персонал </div>
-					<div id="crew2" style="display: none;" class="training_light">
+					<div class="aandopen-light"  onclick="closeopen('crew2')" >Инженерно-технический персонал </div>
+					<div id="crew2" style="display: none;" class="training-light">
 						<div class="about-text">
 							<p>Программа изучения и практического освоения регламентных работ по авиационному и радиоэлектронному оборудованию самолета Ан-148 инженерно-техническим персоналом:<p></br>
 
@@ -504,8 +554,8 @@
 					<br>	
 				</div>
 				<br>
-				<div class="aandopen_dark"  onclick="closeopen('plane1')" >Модификации семейства самолетов АН-148 </div>
-					<div id="plane1" style="display: none;" class="training_dark">
+				<div class="aandopen-dark"  onclick="closeopen('plane1')" >Модификации семейства самолетов АН-148 </div>
+					<div id="plane1" style="display: none;" class="training-dark">
 						<div class="about-text">
 						<table>
 						<tbody>
@@ -546,8 +596,8 @@
 							
 					</div>
 				</div>
-				<div class="aandopen_dark"  onclick="closeopen('plane2')" >Основные летно-технические характеристики </div>
-					<div id="plane2" style="display: none;" class="training_dark flex flexcol">
+				<div class="aandopen-dark"  onclick="closeopen('plane2')" >Основные летно-технические характеристики </div>
+					<div id="plane2" style="display: none;" class="training-dark flex flexcol">
 						<div class="about-text">
 							<table>
 							<tbody>
@@ -661,9 +711,10 @@
 						</div>
 					</div>
 				
-				<div class="aandopen_dark"  onclick="closeopen('plane3')" >Компоновки </div>
-					<div id="plane3" style="display: none;" class="training_dark">
-						<div class="about-text nolimit" >
+				<div class="aandopen-dark"  onclick="closeopen('plane3')" >Компоновки </div>
+					<div id="plane3" style="display: none;" class="training-dark">
+						<!--<div class="about-text nolimit" >-->
+						<div class="flex flexcol" >
 							<h3>Варианты двухклассной компоновки пассажирской кабины Ан-148</h3>
 							<div>Двухклассная компоновка на 68 мест. (8 кресел – шаг 889мм (35”), 60 кресел – шаг 812,8мм (32”).</div>
 							<img src="img/plane-comp-1.png">
@@ -679,7 +730,17 @@
 				</div>
 			</div>
 
-
+			<a id="contact"></a>
+			<div class="basic-block bb-black">
+				<iframe class="contact-form" src="https://docs.google.com/forms/d/e/1FAIpQLSf3AuLOQ_z7SNJZGVl41nVOVgWjPKrfB2S2feWDQr0pi1oMow/viewform?embedded=true" width="500" height="820" frameborder="0" marginheight="0" marginwidth="0">Загрузка...</iframe>
+				<div class="separator sep-hor"></div>
+				<div class="contact-map">
+					<p>Адрес: Рублево-Успенское шоссе д.6</p>
+					<p>Тел./факс: +7 (495) 710-99-60 Доб. 335</p>
+					<br>
+					<iframe class="contact-map" src="https://www.google.com/maps/d/embed?mid=1uoGaGfEo4HFqKLrKFYYDPGwGcgE" width="500" height="480"></iframe>
+				</div>
+			</div>
 		</main>
 		<footer>
 			<p class="footer-text copyright">© ООО "ИФК Тренинг" 2018</p>
