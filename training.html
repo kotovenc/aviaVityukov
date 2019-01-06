@@ -2,6 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Авиатренажеры</title>
 	<link href="css/main.css" type="text/css" rel="stylesheet">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
@@ -12,7 +13,7 @@
 	<div class="header-panel" id="training">
 		<div class="header-panel-bg" style="opacity: 1"></div>
 		<div class="header-logo">
-			<img src="img/header-logo.png">
+			<a href="main.html"><img src="img/header-logo.png"></a>
 		</div>
 		<div class="header-phone">
 			<p class="header-text text-dark">+7 (495) 710-99-60 (Доб. 335)</p>
@@ -29,21 +30,23 @@
 	 
 				<ul id="menu">
 				 	<li>
-						<a href="main.html" class="header-text text-dark menu-link" >ГЛАВНАЯ</a>
+						<a href="main.html" class="menu-link"><p class="header-text text-dark">ГЛАВНАЯ</p></a>
 					</li>
 					<li>
 						<div class="dropdown dropbtn header-text text-dark menu-link">
-							ТРЕНАЖЕРЫ
+							<p class="header-text text-dark">ТРЕНАЖЕРЫ</p>
 						  	<div class="dropdown-content">
-						    	<a href="#">Link 1</a>
-						    	<a href="#">Link 2</a>
-						    	<a href="#">Link 3</a>
+						    	<a href="#"><p style="font-weight: 700;">Ан-148</p></a>
+						    	<a href="#"><p>Комплексный</p></a>
+						    	<a href="#"><p>Второй</p></a>
+						    	<a href="#"><p>Третий</p></a>
+						    	<a href="#"><p style="font-weight: 700;">Ил-96</p></a>
 							 </div>
 						</div>
 					</li>
-					<li><a href="#obuch" class="header-text text-dark menu-link">ОБУЧЕНИЕ</a></li>
-					<li><a href="#plane" class="header-text text-dark menu-link">О САМОЛЕТЕ</a></li>
-					<li><a href="#contact" class="header-text text-dark menu-link">КАРТА</a></li>
+					<li><a href="#obuch" class="menu-link"><p class="header-text text-dark">ОБУЧЕНИЕ</p></a></li>
+					<li><a href="#plane" class="menu-link"><p class="header-text text-dark">О САМОЛЕТЕ</p></a></li>
+					<li><a href="#contact" class="menu-link"><p class="header-text text-dark">КАРТА</p></a></li>
 				</ul>
 			</nav>
 		</div>		
@@ -1009,4 +1012,5 @@
 </body>
 <script src="js/closeopen.js"></script>
 <script src="js/mobile-menu.js"></script>
+
 </html>
