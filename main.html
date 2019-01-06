@@ -2,18 +2,25 @@
 <html>
 	<head>
 		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Авиатренажеры</title>
+
+		<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+		<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+
 		<link href="css/main.css" rel="stylesheet">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<script src="js/jquery-ui.min.js"></script>
 		<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700,800" rel="stylesheet">
+
+		
 	</head>
 	<body>
 		<header>
 			<div class="header-panel">
 				<div class="header-panel-bg"></div>
 				<div class="header-logo">
-					<img src="img/header-logo.png">
+					<a href="main.html"><img src="img/header-logo.png"></a>
 				</div>
 				<div class="header-phone">
 					<p class="header-text">+7 (495) 710-99-60 (Доб. 335)</p>
@@ -30,16 +37,22 @@
 					  </div>
 					  <ul id="menu" style="background-color: none;">
 					    <li>
-							<a href="#main" class="header-text menu-link" style="background: none;">ГЛАВНАЯ</a>
+							<a href="#main" class="header-text menu-link" style="background: none;"><p class="header-text">ГЛАВНАЯ</p></a>
 						</li>
 						<li>
-							<a href="training.html" class="header-text menu-link" style="background: none;">ТРЕНАЖЕРЫ</a>
+							<a href="#about" class="header-text menu-link" style="background: none;"><p class="header-text">О НАС</p></a>
 						</li>
 						<li>
-							<a href="#about" class="header-text menu-link" style="background: none;">О НАС</a>
+							<a href="#contact" class="header-text menu-link" style="background: none;"><p class="header-text">КОНТАКТЫ</p></a>
 						</li>
 						<li>
-							<a href="#contact" class="header-text menu-link" style="background: none;">КОНТАКТЫ</a>
+							<div class="dropdown dropbtn header-text menu-link">
+								<p class="header-text">ТРЕНАЖЕРЫ</p>
+							  	<div class="dropdown-content header-text">
+							    	<a href="training.html"><p class="header-text">Ан-148</p></a>
+							    	<a href="training.html"><p class="header-text">Ил-96</p></a>
+								 </div>
+							</div>
 						</li>
 					  </ul>
 
@@ -50,17 +63,12 @@
 			</div>
 			<a id="main"></a>
 			<div class="header-slider">
-				<div class="trLink">
-					<h1><a href="training.html">Тренажеры Ан-148</a></h1>
-					<p>Этот блок - заглушка для слайдера.</p>
-				</div>
-				
 				<div class="black-panel"></div>
-
-				<img id="tempPlane" src="img/header-plane.png">
-				<div class="header-inf">
-					
-				</div>
+				<div class="slider">
+					  <div><img class="tempPlane" src="img/header-plane.png"></div>
+					  <div><img class="tempPlane" src="img/header-plane.png"></div>
+					  <div><img class="tempPlane" src="img/header-plane.png"></div>
+					</div>
 			</div>	
 		</header>
 		<main>
@@ -130,4 +138,10 @@
 	</body>
 	<script src="js/menu.js"></script>
 	<script src="js/mobile-menu.js"></script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+	<script type="text/javascript">
+		$('.slider').slick({
+			dots: true,
+		});
+	</script>
 </html>
