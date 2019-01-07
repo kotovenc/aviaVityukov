@@ -1,33 +1,44 @@
 $( document ).ready(function() {
-    $('#menu').css("background-color", "rgba(0,0,0,0)");
-    $(".header-text").css("color", '#fff');
-    $(".header-text").css("backgroundColor", 'rgba(0,0,0,0)');
+    
+    if (window.innerWidth > 500) {
+        $('#menu').css("background-color", "rgba(0,0,0,0)");
+        $(".header-text").css("color", '#fff');
+        $(".header-text").css("backgroundColor", 'rgba(0,0,0,0)');
+    } else{
+        //$('#menu').css("background-color", "rgba(255,255,255,1)");
+        $(".header-text").css("color", '#000');
+        $(".header-text").css("backgroundColor", 'rgba(255,255,255,1)');
+    }
+});
+
+ $(window).resize(function() {
+    if (window.innerWidth > 500 && $(window).scrollTop() < 50) {
+        $('#menu').css("background-color", "rgba(0,0,0,0)");
+        $(".header-text").css("color", '#fff');
+        $(".header-text").css("backgroundColor", 'rgba(0,0,0,0)');
+    } else{
+        //$('#menu').css("background-color", "rgba(255,255,255,1)");
+        $(".header-text").css("color", '#000');
+        $(".header-text").css("backgroundColor", 'rgba(255,255,255,1)');
+    }
 });
 
 $(window).scroll(function () {
     if($(window).scrollTop() > 50){
-        $('.header-panel-bg').stop().animate({
-            opacity:1,
-        }, 100);
-        $(".header-text").stop().animate({
-            color: '#000',
-            backgroundColor: '#fff',
-        }, 200);
-         $('.ham-li').stop().animate({
-            backgroundColor: '#000',
-        }, 100);
+        $(".header-panel-bg").css("opacity", "1");
+        if (window.innerWidth > 500) {
+            $(".header-text").css("color", '#000');
+            $(".header-text").css("backgroundColor", '#fff');
+        }
+         $('.ham-li').css("backgroundColor", '#000');
     } else
     {
-         $(".header-text").stop().animate({
-            color: '#fff',
-            backgroundColor: 'rgba(0,0,0,0)',
-        }, 100);
-         $('.header-panel-bg').stop().animate({
-            opacity:0,
-        }, 500);
-         $('.ham-li').stop().animate({
-            backgroundColor: '#fff',
-        }, 100);
+        if (window.innerWidth > 500) {
+         $(".header-text").css("color", '#fff');
+        $(".header-text").css("backgroundColor", 'rgba(0,0,0,0)');
+        }
+         $(".header-panel-bg").css("opacity", "0");
+          $('.ham-li').css("backgroundColor", '#fff');
     }
 
     /*
