@@ -114,6 +114,11 @@ body ul li {
 		&>img{
 			height: 40px;
 			width: 250px;
+			@media (max-width:400px)
+				{
+					width:100%;
+					height:auto;
+				}
 		}
 	}
 	&-nav {
@@ -543,10 +548,13 @@ position: relative;
 
 ///////COLORS FOR DROPDOWN PANEL
 .aandopen(@color){
+	display:flex;
+	flex-direction:column;
+	justify-content:center;
 	user-select: none;
 	cursor: pointer;
 	height: 50px;
-	padding-top: 10px;
+	padding:5px 0;
 	width:100%;
 	background-color:@color;
 	border-top: 2px solid rgba(0, 0, 0, 0.1);
@@ -562,11 +570,6 @@ position: relative;
 				{
 					font-size:16px;
 					height:32px;
-				}	
-	@media (max-width:410px)
-				{
-					font-size:14px;
-					height:40px;
 				}		
 	color:#fff-@color;
 }
@@ -722,11 +725,11 @@ position: relative;
 			height:300px;
 		}
 		@media (max-width: 490px) {
-			width:90%;
+			width:100%;
 			height:auto;
 		}
 		&.layout{
-			width:auto;
+		//	width:auto;
 			height:auto;
 			@media (max-width:940px){
 				width:100%;
@@ -782,7 +785,7 @@ position: relative;
 	}
 
 	.first{
-		@media (max-width: 950px) {
+		@media (max-width: 940px) {
 			width:250px;
 			height:150px;
 			margin:0 20px;
@@ -802,7 +805,7 @@ position: relative;
 			height:200px;
 		}
 
-		@media (max-width: 950px){
+		@media (max-width: 940px){
 			width:250px;
 			height:150px;
 			margin:0 20px;
@@ -817,7 +820,7 @@ position: relative;
 	}
 
 	.third{
-		@media (max-width: 950px){
+		@media (max-width: 940px){
 			display:none;
 		}
 	}
@@ -835,7 +838,11 @@ position: relative;
 			{
 			text-align:center;
 		}
+		
 	}
+	&-leftsuper{
+				text-align:left;
+			}
 	&-right{
 		text-align:right;
 		@media (max-width:686px)
