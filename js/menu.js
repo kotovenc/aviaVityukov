@@ -1,5 +1,7 @@
 $( document ).ready(function() {
     $('#menu').css("background-color", "rgba(0,0,0,0)");
+    $(".header-text").css("color", '#fff');
+    $(".header-text").css("backgroundColor", 'rgba(0,0,0,0)');
 });
 
 $(window).scroll(function () {
