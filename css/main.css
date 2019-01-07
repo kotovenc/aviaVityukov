@@ -118,6 +118,12 @@ body ul li {
     width: 200px;
   }
 }
+@media (max-width: 400px) {
+  .header-logo > img {
+    width: 100%;
+    height: auto;
+  }
+}
 .header-nav {
   position: absolute;
   right: 0;
@@ -136,9 +142,11 @@ body ul li {
   cursor: pointer;
   color: #5472e3 !important;
 }
+
 .slider {
   height: 100%;
 }
+
 .triangles {
   z-index: 1 !important;
   display: block;
@@ -503,10 +511,13 @@ ul.hamburger li:nth-child(3) {
   color: white;
 }
 .aandopen-light {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   user-select: none;
   cursor: pointer;
   height: 50px;
-  padding-top: 10px;
+  padding: 5px 0;
   width: 100%;
   background-color: #e8e8e8;
   border-top: 2px solid rgba(0, 0, 0, 0.1);
@@ -526,17 +537,15 @@ ul.hamburger li:nth-child(3) {
     height: 32px;
   }
 }
-@media (max-width: 410px) {
-  .aandopen-light {
-    font-size: 14px;
-    height: 40px;
-  }
-}
+
 .aandopen-dark {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   user-select: none;
   cursor: pointer;
   height: 50px;
-  padding-top: 10px;
+  padding: 5px 0;
   width: 100%;
   background-color: #292d32;
   border-top: 2px solid rgba(0, 0, 0, 0.1);
@@ -556,12 +565,7 @@ ul.hamburger li:nth-child(3) {
     height: 32px;
   }
 }
-@media (max-width: 410px) {
-  .aandopen-dark {
-    font-size: 14px;
-    height: 40px;
-  }
-}
+
 .training-light {
   text-align: center;
   background-color: #f5f5f5;
@@ -772,12 +776,11 @@ ul.hamburger li:nth-child(3) {
 }
 @media (max-width: 490px) {
   .flex img {
-    width: 90%;
+    width: 100%;
     height: auto;
   }
 }
 .flex img.layout {
-  width: auto;
   height: auto;
 }
 @media (max-width: 940px) {
@@ -829,7 +832,7 @@ ul.hamburger li:nth-child(3) {
     height: 150px;
   }
 }
-@media (max-width: 950px) {
+@media (max-width: 940px) {
   .pictures .first {
     width: 250px;
     height: 150px;
@@ -853,7 +856,7 @@ ul.hamburger li:nth-child(3) {
     height: 200px;
   }
 }
-@media (max-width: 950px) {
+@media (max-width: 940px) {
   .pictures .second {
     width: 250px;
     height: 150px;
@@ -868,7 +871,7 @@ ul.hamburger li:nth-child(3) {
     border-radius: 0;
   }
 }
-@media (max-width: 950px) {
+@media (max-width: 940px) {
   .pictures .third {
     display: none;
   }
@@ -889,6 +892,9 @@ ul.hamburger li:nth-child(3) {
     text-align: center;
   }
 }
+.p400-leftsuper {
+  text-align: left;
+}
 .p400-right {
   text-align: right;
 }
@@ -897,6 +903,7 @@ ul.hamburger li:nth-child(3) {
     text-align: center;
   }
 }
+
 .slick-prev {
   left: 10px;
 }
@@ -916,3 +923,4 @@ ul.hamburger li:nth-child(3) {
 .slick-dots > li > button::before {
   color: white !important;
 }
+
