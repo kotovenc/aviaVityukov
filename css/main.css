@@ -148,6 +148,18 @@ body ul li {
 .slider {
   height: 100%;
 }
+.slider > .slider-arrow {
+  opacity: 0;
+  transition: opacity 0.2s ease-out;
+}
+@media screen and (max-width: 1100px) {
+  .slider > .slider-arrow {
+    opacity: 1;
+  }
+}
+.slider:hover > .slider-arrow {
+  opacity: 1;
+}
 .triangles {
   z-index: 1 !important;
   display: block;
@@ -1034,18 +1046,26 @@ ul.hamburger li:nth-child(3) {
 .slider-arrow:hover {
   cursor: pointer;
 }
-.slider-arrow:hover > div {
-  text-shadow: 0 0 30px white;
-}
 .slider-arrow > div {
-  color: rgba(255, 255, 255, 0.5);
+  color: white;
+  padding-top: 15px;
   font-size: 40px;
+  height: 70px;
+  width: 40px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+.slider-arrow > div > i {
+  opacity: 0.5;
+  transition: opacity 0.2s ease-out;
+}
+.slider-arrow > div:hover > i {
+  opacity: 1;
 }
 .arrow-prev {
-  left: 10px;
-  padding: 50px 70px 50px 10px;
+  left: 5%;
 }
 .arrow-next {
-  right: 10px;
-  padding: 50px 10px 50px 70px;
+  right: 5%;
 }
