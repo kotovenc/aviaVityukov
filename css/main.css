@@ -510,13 +510,14 @@ ul.hamburger li:nth-child(3) {
 }
 .dropdown-content {
   display: block;
-  margin: 15px 16px 0 0;
+  margin: 15px 0 0 0;
 }
 @media screen and (min-width: 1100px) {
   .dropdown-content {
     position: absolute;
     left: -15px;
     top: 15px;
+    margin: 25px 16px 0 0;
     display: none;
   }
   .dropdown-content > a {
@@ -976,13 +977,6 @@ ul.hamburger li:nth-child(3) {
   height: 100vh;
   height: calc(var(--vh, 1vh) * 100);
 }
-.slick-dots {
-  z-index: 3;
-  bottom: 65px;
-}
-.slick-dots > li > button::before {
-  color: white !important;
-}
 .down-arrow {
   position: absolute;
   z-index: 4;
@@ -998,4 +992,60 @@ ul.hamburger li:nth-child(3) {
 .down-arrow:hover {
   opacity: 0.75;
   text-shadow: 0 0 15px #ffffff;
+}
+.slick-dots {
+  z-index: 3;
+  bottom: 55px;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 1rem 0;
+  list-style-type: none;
+}
+.slick-dots li {
+  margin: 0 0.25rem;
+  padding: 10px 0;
+  width: auto;
+  height: auto;
+}
+.slick-dots button {
+  display: block;
+  box-sizing: border-box;
+  width: 100px !important;
+  height: 5px !important;
+  padding: 0 !important;
+  margin: 5 px;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.25) !important;
+  text-indent: -9999px;
+  transition: opacity 0.5s ease-out;
+}
+.slick-dots button::before {
+  content: none !important;
+}
+.slick-dots li.slick-active button {
+  background-color: rgba(255, 255, 255, 0.75) !important;
+}
+.slider-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+.slider-arrow:hover {
+  cursor: pointer;
+}
+.slider-arrow:hover > div {
+  text-shadow: 0 0 30px white;
+}
+.slider-arrow > div {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 40px;
+}
+.arrow-prev {
+  left: 10px;
+  padding: 50px 70px 50px 10px;
+}
+.arrow-next {
+  right: 10px;
+  padding: 50px 10px 50px 70px;
 }
