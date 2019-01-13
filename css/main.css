@@ -1066,6 +1066,26 @@ ul.hamburger li:nth-child(3) {
 .arrow-prev {
   left: 5%;
 }
+@media screen and (max-width: 1100px) {
+  .arrow-prev {
+    left: 10px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .arrow-prev {
+    left: 0px;
+  }
+}
 .arrow-next {
   right: 5%;
+}
+@media screen and (max-width: 1100px) {
+  .arrow-next {
+    right: 10px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .arrow-next {
+    right: 0px;
+  }
 }

@@ -1082,10 +1082,22 @@ position: relative;
 
 .arrow-prev{
 	left: 5%;
+	@media screen and (max-width: 1100px) {
+		left: 10px;
+	}
+	@media screen and (max-width: 600px) {
+		left: 0px;
+	}
 	//padding: 50px 70px 50px 10px;
 }
 
 .arrow-next{
 	right: 5%;
+	@media screen and (max-width: 1100px) {
+		right: 10px;
+	}
+	@media screen and (max-width: 600px) {
+		right: 0px;
+	}
 	//padding: 50px 10px 50px 70px;
 }
