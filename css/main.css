@@ -333,17 +333,17 @@ body ul li {
   color: rgba(255, 255, 255, 0.7);
 }
 .slide-content.bottomleft {
-  top: 72%;
+  top: 70%;
   left: 10%;
   transform: translate(-10%, -10%);
-  padding: 35px 15px;
+  padding: 25px 15px;
   border-radius: 10px;
   max-width: 500px;
 }
 .slide-content.bottomleft .black-panel {
   border-radius: 15px;
-  box-shadow: 0px 0px 10px 5px black;
-  opacity: 0.7;
+  box-shadow: 0px 0px 20px 20px black;
+  opacity: 0.3;
 }
 .slide-content.bottom {
   top: 72%;
@@ -354,8 +354,8 @@ body ul li {
 }
 .slide-content.bottom .black-panel {
   border-radius: 15px;
-  box-shadow: 0px 0px 10px 5px black;
-  opacity: 0.7;
+  box-shadow: 0px 0px 20px 20px black;
+  opacity: 0.3;
 }
 .slide-content.topsmall {
   top: 22%;
@@ -376,31 +376,29 @@ body ul li {
   width: 100%;
   height: 100%;
   margin: 0 0 0 -100px;
-  opacity: 0.6;
+  opacity: 0.3;
 }
 .slide-content.topsmall2 {
-  top: 22%;
+  top: 18%;
   left: 50%;
   transform: translate(-50%, -10%);
-  padding: 30px;
+  padding: 20px;
   border-radius: 10px;
 }
 .slide-content.topsmall2 .black-panel {
-  top: 0;
-  left: 0;
-  z-index: -1;
-  width: 100%;
-  height: 100%;
-  opacity: 0.6;
+  border-radius: 15px;
+  box-shadow: 0px 0px 20px 20px black;
+  opacity: 0.3;
 }
 .slide-content.longpanel2 {
   position: absolute;
-  top: 27%;
+  top: 21%;
   z-index: 3;
   width: 100%;
-  height: 10%;
+  height: 15%;
   background-color: black;
-  opacity: 0.6;
+  box-shadow: 0px 0 10px 5px black;
+  opacity: 0.3;
   padding: 10px 0 10px 0;
   text-align: center;
 }
@@ -527,6 +525,9 @@ footer {
   position: fixed;
   z-index: 10;
   clear: both;
+  box-shadow: 0px 0px 20px 20px black;
+  opacity: 0.3;
+  background-color: black;
 }
 .dropbtn {
   border: none;
