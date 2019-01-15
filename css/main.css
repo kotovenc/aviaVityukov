@@ -335,17 +335,18 @@ body ul li {
   color: rgba(255, 255, 255, 0.7);
 }
 .slide-content.bottomleft {
-  top: 68%;
+  top: auto;
+  bottom: 100px;
   left: 10%;
   transform: translate(-10%, -10%);
-  padding: 25px 15px;
+  padding: 50px 15px;
   border-radius: 10px;
   max-width: 500px;
 }
 .slide-content.bottomleft .black-panel {
   border-radius: 15px;
   box-shadow: 0px 0px 20px 20px black;
-  opacity: 0.3;
+  opacity: 0.4;
 }
 @media (max-width: 520px) {
   .slide-content.bottomleft {
@@ -354,7 +355,8 @@ body ul li {
   }
 }
 .slide-content.bottom {
-  top: 66%;
+  bottom: 150px;
+  top: auto;
   left: 50%;
   transform: translate(-50%, -10%);
   padding: 10px 70px;
@@ -363,7 +365,7 @@ body ul li {
 .slide-content.bottom .black-panel {
   border-radius: 15px;
   box-shadow: 0px 0px 20px 20px black;
-  opacity: 0.3;
+  opacity: 0.4;
 }
 @media (max-width: 520px) {
   .slide-content.bottom {
@@ -389,40 +391,59 @@ body ul li {
   width: 100%;
   height: 100%;
   margin: 0 0 0 -100px;
-  opacity: 0.3;
+  opacity: 0.4;
 }
 .slide-content.topsmall2 {
-  top: 18%;
+  top: 250px;
   left: 50%;
-  transform: translate(-50%, -10%);
   padding: 20px;
 }
 .slide-content.topsmall2 .black-panel {
   border-radius: 15px;
   box-shadow: 0px 0px 20px 20px black;
-  opacity: 0.3;
+  opacity: 0.4;
 }
 @media (max-width: 520px) {
   .slide-content.topsmall2 {
     padding: 10px 0;
   }
 }
+@media (max-width: 810px) {
+  .slide-content.topsmall2 {
+    top: 280px;
+  }
+}
 .slide-content.longpanel2 {
   position: absolute;
-  top: 21%;
-  z-index: 3;
+  top: 200px;
   width: 98%;
-  background-color: black;
-  box-shadow: 0px 0 10px 5px black;
-  opacity: 0.3;
   padding: 10px 0 10px 0;
   text-align: center;
 }
-@media (max-width: 540px) {
+.slide-content.longpanel2 .black-panel {
+  border-radius: 15px;
+  box-shadow: 0px 0px 20px 10px black;
+  opacity: 0.4;
+}
+@media (max-width: 644px) {
   .slide-content.longpanel2 {
-    top: 25%;
-    box-shadow: 0px 0 5px 5px black;
-    width: 96%;
+    top: 230px;
+    width: 90%;
+  }
+}
+@media (max-width: 476px) {
+  .slide-content.longpanel2 {
+    top: 260px;
+  }
+}
+@media (max-width: 400px) {
+  .slide-content.longpanel2 {
+    top: 270px;
+  }
+}
+@media (max-width: 540px) {
+  .slide-content.longpanel2 > p {
+    padding: 0 40px;
   }
 }
 .longpanel {
