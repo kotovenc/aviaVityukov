@@ -65,8 +65,6 @@ body ul li {
   padding-right: 0px;
   font-size: 20px;
   color: white;
-  box-shadow: 0px 0px 20px 20px rgba(0, 0, 0, 0.5);
-  background-color: rgba(0, 0, 0, 0.5);
 }
 .header-panel > div {
   position: absolute;
@@ -569,6 +567,17 @@ footer {
   position: fixed;
   z-index: 10;
   clear: both;
+}
+.header-shadow {
+  position: absolute;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 80%, rgba(0, 0, 0, 0) 100%);
+  height: 100px;
+  width: 100%;
+  z-index: 3;
+}
+.header-shadow-advanced {
+  height: 350px;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 10%, rgba(0, 0, 0, 0) 100%);
 }
 .dropbtn {
   border: none;
@@ -1222,4 +1231,7 @@ ul.hamburger li:nth-child(3) {
   .arrow-next {
     right: 0px;
   }
+}
+.p750 {
+  max-width: 750px;
 }
