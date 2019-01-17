@@ -344,9 +344,9 @@ body ul li {
 .slideBg{
 	position: absolute;
 	z-index: 1;
-	top: 0;
+	top: 60px;
 	width: 100%;
-	height: 100%;
+	height: calc(~"100% - 60px");
 	object-fit: cover;
 }
 
@@ -363,7 +363,10 @@ body ul li {
 		color: white;
 	}
 	&>p{
-		color: rgba(255,255,255,0.7);
+		color: rgba(255,255,255,0.8);
+		font-size: 20px;
+		text-shadow: 0 0 15px black, 0 0 15px black, 0 0 15px black;
+		font-weight:400;
 	}
 }
 
@@ -386,7 +389,7 @@ body ul li {
 	width: 100%;
 	height: 100%;
 	background-color: black;
-	opacity: 0.6;
+	opacity: 0.55;
 }
 .trLink{
 	z-index: 5;
@@ -1143,4 +1146,8 @@ position: relative;
 
 .whiteBg{
 	background-color: white;
+}
+
+.shadowed-text{
+	text-shadow: 0 0 10px black;
 }
