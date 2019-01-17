@@ -41,7 +41,7 @@ body ul li {
   box-sizing: border-box;
   width: 100%;
   text-align: center;
-  padding: 120px 20px;
+  padding: 90px 20px 30px 20px;
 }
 .basic-block > div {
   position: relative;
@@ -242,6 +242,23 @@ body ul li {
     left: 0;
     transform: none;
     top: 190px;
+    margin: 0 30px;
+    width: 2px;
+    height: 200px;
+  }
+}
+.sep-hor-light {
+  display: block;
+  height: 2px;
+  margin: 10px 100px 10px 100px;
+  width: 200px;
+  background-color: #5472e3;
+}
+@media (min-width: 600px) {
+  .sep-hor-light {
+    display: inline-block;
+    left: 0;
+    transform: none;
     margin: 0 30px;
     width: 2px;
     height: 200px;
@@ -811,6 +828,22 @@ ul.hamburger li:nth-child(3) {
 }
 .training-dark .nolimit div {
   width: auto;
+}
+.training-info {
+  padding: 20px 10px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.training-info p {
+  padding: 10px 10px;
+  width: 300px;
+}
+@media (max-width: 600px) {
+  .training-info {
+    flex-direction: column;
+  }
 }
 .flex {
   display: flex;

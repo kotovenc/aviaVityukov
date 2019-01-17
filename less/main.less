@@ -59,7 +59,7 @@ body ul li {
 	box-sizing: border-box;
 	width: 100%;
 	text-align: center;
-	padding: 120px 20px;
+	padding: 90px 20px 30px 20px;
 	&>div{
 		position: relative;
 		z-index: 2;	
@@ -220,7 +220,7 @@ body ul li {
 			{
 				font-size:14px;
 			}
-		}
+		} 
 	}
 	&-black{
 		position: relative;
@@ -262,8 +262,8 @@ body ul li {
 	width: 200px;
 	background-color: @highlight;
 }
-@media (min-width: 1200px){
-	.sep-hor{
+.sep-hor{
+	@media (min-width: 1200px){
 		display: inline-block;
 		position: absolute;
 		left: 0; transform: none;
@@ -272,7 +272,24 @@ body ul li {
 		width: 2px;
 		height: 200px;
 	}
+	&-light{
+		display: block;
+		height: 2px;
+		margin: 10px 100px 10px 100px;
+		width: 200px;
+		background-color: @highlight;
+		@media (min-width: 600px)
+			{
+			display: inline-block;
+			left: 0; 
+			transform: none;
+			margin: 0 30px;
+			width: 2px;
+			height: 200px;
+		}
+	}
 }
+
 
 .about{
 
@@ -811,6 +828,20 @@ position: relative;
 	&-dark{
 		.training(@darkbg,@lightbg);
 	}
+	&-info{
+		padding:20px 10px;
+		text-align:center;
+		display:flex;
+		justify-content:center;
+		align-items:center;
+		p{
+			padding:10px 10px;
+			width:300px;	
+		}
+		@media (max-width:600px){
+			flex-direction:column;
+		}
+	}
 }
 
 .flex{
@@ -854,7 +885,6 @@ position: relative;
 		}
 	}
 	div{
-	//	text-align:left;
 		p{
 			padding:4px 20px;
 		}
@@ -1140,3 +1170,4 @@ position: relative;
 	top: 85px;
 	padding-bottom: 85px;
 }
+.
