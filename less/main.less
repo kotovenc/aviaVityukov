@@ -37,7 +37,7 @@ header {
 	z-index: 5;
 	box-sizing: border-box;
 	width: 100%;
-	height: 100vh;
+	//height: 100vh;
 	height: calc(~"var(--vh, 1vh) * 100");
 	background-color: #434344;
 	overflow: hidden;
@@ -48,6 +48,7 @@ p{
 }
 main{
 	position: relative;
+	text-aling: center;
 	z-index: 4;
 }
 body ul li {
@@ -58,7 +59,7 @@ body ul li {
 	box-sizing: border-box;
 	width: 100%;
 	text-align: center;
-	padding: 120px 20px;
+	padding: 90px 20px 30px 20px;
 	&>div{
 		position: relative;
 		z-index: 2;	
@@ -166,6 +167,7 @@ body ul li {
 }
 
 .slider{
+	margin-bottom: 0 !important;
 	height: 100%;
 	&>.slider-arrow{
 		opacity: 0;
@@ -218,7 +220,7 @@ body ul li {
 			{
 				font-size:14px;
 			}
-		}
+		} 
 	}
 	&-black{
 		position: relative;
@@ -260,8 +262,8 @@ body ul li {
 	width: 200px;
 	background-color: @highlight;
 }
-@media (min-width: 1200px){
-	.sep-hor{
+.sep-hor{
+	@media (min-width: 1200px){
 		display: inline-block;
 		position: absolute;
 		left: 0; transform: none;
@@ -270,7 +272,24 @@ body ul li {
 		width: 2px;
 		height: 200px;
 	}
+	&-light{
+		display: block;
+		height: 2px;
+		margin: 10px 100px 10px 100px;
+		width: 200px;
+		background-color: @highlight;
+		@media (min-width: 600px)
+			{
+			display: inline-block;
+			left: 0; 
+			transform: none;
+			margin: 0 30px;
+			width: 2px;
+			height: 200px;
+		}
+	}
 }
+
 
 .about{
 
@@ -809,6 +828,20 @@ position: relative;
 	&-dark{
 		.training(@darkbg,@lightbg);
 	}
+	&-info{
+		padding:20px 10px;
+		text-align:center;
+		display:flex;
+		justify-content:center;
+		align-items:center;
+		p{
+			padding:10px 10px;
+			width:300px;	
+		}
+		@media (max-width:600px){
+			flex-direction:column;
+		}
+	}
 }
 
 .flex{
@@ -852,7 +885,6 @@ position: relative;
 		}
 	}
 	div{
-	//	text-align:left;
 		p{
 			padding:4px 20px;
 		}
@@ -1010,7 +1042,6 @@ position: relative;
 	
 	margin: 0;
 	padding: 1rem 0;
-	
 	list-style-type: none;
 	
 		li {
@@ -1023,7 +1054,10 @@ position: relative;
 		button {
 			display: block;
 			box-sizing: border-box;
-			width: 100px !important;
+			width: 30px !important;
+			@media screen and (min-width: 600px) {
+				width: 100px !important;
+			}
 			height: 5px !important;
 			padding: 0 !important;
 			margin: 5 px;
@@ -1101,3 +1135,39 @@ position: relative;
 	}
 	//padding: 50px 10px 50px 70px;
 }
+
+.p750{
+	max-width: 750px;
+}
+
+.training-slider{
+	height: 600px;
+	@media screen and (max-width: 600px) {
+		height: 400px;
+	}
+	&>div>div>div>img{
+		object-fit: cover;
+    	height: 100%;
+    	width: 100%;
+	}
+	&-header{
+		position: absolute;
+		z-index: 5;
+		color: white;
+		top: 100px;	
+		left: 50%;
+		transform: translate(-50%, 0);
+		text-shadow: 0 0 15px black;
+	}
+}
+
+.slider-parent{
+	position: relative;
+	text-align: center;
+}
+
+.first-slider{
+	top: 85px;
+	padding-bottom: 85px;
+}
+.

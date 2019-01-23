@@ -5,10 +5,14 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="theme-color" content="white">
 	<title>Авиатренажеры</title>
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
 	<link href="css/main.css" type="text/css" rel="stylesheet">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 	<script src="js/jquery-ui.min.js"></script>
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700,800" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
 </head>
 <body>
 	<div class="header-panel" id="training">
@@ -38,9 +42,10 @@
 							<p class="header-text text-dark">ТРЕНАЖЕРЫ</p>
 						  	<div class="dropdown-content">
 						    	<a href="#main"><p style="font-weight: 700;">Ан-148</p></a>
-						    	<a href="#complex"><p>Комплексный</p></a>
-						    	<a href="#"><p>Второй</p></a>
-						    	<a href="#"><p>Третий</p></a>
+						    	<a href="#main"><p>КТС</p></a>
+						    	<a href="#snt"><p>ПТС</p></a>
+						    	<a href="#bortpr"><p>Бортпроводников</p></a>
+						    	<a href="#study"><p>Учебный класс</p></a>
 						    	<a href="trainingIl.html"><p style="font-weight: 700;">Ил-96</p></a>
 							 </div>
 						</div>
@@ -54,62 +59,113 @@
 	</div>
 	<main>
 		<a id="main"></a>
-			<div class="basic-block bb-white">
-				<div class="about-text">
-					<h1>Комплексный тренажер</h1>
-					<br><br><br>
-						
-					<div class="flex">
-						<p class="p400 p400-right" >Комплексный тренажер Ан-148 («КТС Ан-148») разработан и построен российской компанией ЗАО «Транзас» (Санкт-Петербург) по заказу лизинговой компании ОАО «Ильюшин Финанс Ко.»<br><br> Это первый в России тренажер отечественного производства, соответствующий уровню «D» - наивысшему уроню классификации авиационных тренажеров по международным стандартам, позволяющий осуществлять подготовку летного персонала без тренировок на реальном самолете. </p>
-						<img src="img/complex.png">
-					</div>
-
-					<br><br>			
-				</div>	
+			<div class="slider-parent first-slider">
+				<h1 class="training-slider-header">Комплексный тренажер</h1>
+				<div class="slider training-slider">
+					<div class="slide"><img src="img/An/kts/1.JPG"></div>
+					<div class="slide"><img src="img/An/kts/2.JPG"></div>
+					<div class="slide"><img src="img/An/kts/3.JPG"></div>
+					<div class="slide"><img src="img/An/kts/4.JPG"></div>
+					<div class="slide"><img src="img/An/kts/5.JPG"></div>
+				</div>
 			</div>
-
-			<div class="basic-block bb-black flex flexcol">
-				<div class="pictures">
+			<div class="basic-block bb-white training-info">
+				<p class="p400" >Комплексный тренажер Ан-148 («КТС Ан-148») разработан и построен российской компанией ЗАО «Транзас» (Санкт-Петербург) по заказу лизинговой компании ОАО «Ильюшин Финанс Ко.»</p>	
+				<div class=" sep-hor-light"></div>
+				<p class="p400">Это первый в России тренажер отечественного производства, соответствующий уровню «D» - наивысшему уроню классификации авиационных тренажеров по международным стандартам, позволяющий осуществлять подготовку летного персонала без тренировок на реальном самолете. </p>	
+			</div>
+		
+			<div class="basic-block bb-black training-info">
+				<!--div class="pictures">
 					<img src="img/temp2.jpg" class="first">
 					<img src="img/temp.jpg" class="second">
 					<img src="img/temp3.jpg" class="third">
-				</div>
+				</div-->
 				<p class="p400">Комплексный (Full Flight Simulator - FFS) тренажер - это пилотажный тренажер, который имеет систему подвижности, имитирующую полет самолета, оборудован кабиной полностью соответствующей кабине пилотов реального воздушного судна, имеет совершенную систему визуализации и предназначен для отработки комплексных навыков выполнения полетов.</p>
 			</div>
-
-
-			<div class="basic-block bb-white">
-				<div class="about-text">
-					<h1>Тренажер аварийно-спасательной подготовки</h1>
-					<br><br><br>	
-					<div class="flex">
-						<p class="p400 p400-right"> Ежегодная аварийно-спасательная подготовка проводится на базе макета воздушного судна Ан-148.<br><br> Отрабатываются навыки оперирования дверью (door training); slide training, CEET (cabin emergency evacuation training) - проведение аварийно спасательной эвакуации с использованием аварийно-спасательного оборудования. </p>
-						<img src="img/Tumb_TBP.png">
-					</div>
-					<br><br>	
+			<a id="snt"></a>
+			<div class="slider-parent">
+				<h1 class="training-slider-header">Тренажер ПТС</h1>
+				<div class="slider training-slider">
+					<div class="slide"><img src="img/An/snt/1.JPG"></div>
+					<div class="slide"><img src="img/An/snt/2.JPG"></div>
+					<div class="slide"><img src="img/An/snt/3.JPG"></div>
 				</div>
 			</div>
 
+			<div class="basic-block bb-white training-info">
+				<p class="p400">Процедурный тренажер Ан-148 («ПТС Ан-148») разработан и построен российской компанией ЗАО «Транзас» (Санкт-Петербург) по заказу лизинговой компании ОАО «Ильюшин Финанс Ко.». </p>	
+				<div class=" sep-hor-light"></div>
+				<p class="p400">Процедурные тренажеры (Flight Procedures Training Device) предназначены для отработки экипажем процедур подготовки и выполнения полета. В тренажерах такого назначения пульты, приборы и органы управления обычно имитируется с помощью сенсорных мониторов.  </p>
+			</div>
 
-			<div class="basic-block bb-black flex flexcol">
-				<div class="pictures">
+
+			<div class="basic-block bb-black training-info">
+				<!--div class="pictures">
 					<img src="img/temp2.jpg" class="first">
 					<img src="img/temp.jpg" class="second">
 					<img src="img/temp3.jpg" class="third">
-				</div><br><br>
+				</div><br><br-->
 					
-				<p class="p400">  Водная аварийно-спасательная подготовка проводится в специально оборудованном бассейне на базе Учебного Центра С7 Тренинг – отработка навыков оказание помощи людям в воде, выживания в водном пространстве, приемов сохранения тепла и энергии.</p>
+				<p class="p400">Виды тренировок на ПТС:
+					Для удобства отдельные пульты и органы управления могут быть представлены в виде полноразмерных макетов. В нашем варианте процедурного тренажера установлен имитатор козырька приборной доски пилотов, состоящий из пульта управления автопилотом и пультов сигнализации и приоритета. Также на тренажере установлены имитаторы лицевых панелей вычислительной системы самолетовождения. 
+				</p>
 			</div>
 
-		<div class="basic-block bb-white flex flexcol">
-			<br><br><br>
-			<p class="p400"> Неотъемлемая часть аварийно-спасательной подготовки – совместные тренинги кабинных и летных экипажей - отработка взаимодействия между пилотами и бортпроводниками. Во время тренингов отрабатываются навыки самостоятельного принятия решений: что делать, если летный экипаж вышел из строя полностью или частично, как самостоятельно проводить эвакуацию, что делать в условиях автономного выживания, групповое и индивидуальное выживание в неизвестной и малоизвестной климато-географической местности (Арктика, пустыня, тропики, джунгли, водное пространство)</p>
-			<br><br>
-		</div>
-    <div class="basic-block bb-black flex flexcol">
-			<p class="p400">  Практическое обучение проводится в специализированных классах, занятия по медицине проводятся на профильных тренажерах. Преподаватели в области подготовки кабинных экипажей - сертифицированные специалисты-практики.</p>
-		</div>
+			<a id="bortpr"></a>
+			<div class="slider-parent">
+				<h1 class="training-slider-header">Тренажер бортпроводников</h1>
+				<div class="slider training-slider">
+					<div class="slide"><img src="img/An/bortpr/1.JPG"></div>
+					<div class="slide"><img src="img/An/bortpr/2.JPG"></div>
+					<div class="slide"><img src="img/An/bortpr/3.JPG"></div>
+				</div>
+			</div>
 
+			<div class="basic-block bb-white training-info">
+				<p class="p400"> Ежегодная аварийно-спасательная подготовка проводится на базе макета воздушного судна Ан-148. Отрабатываются навыки оперирования дверью (door training); slide training, CEET (cabin emergency evacuation training) - проведение аварийно спасательной эвакуации с использованием аварийно-спасательного оборудования. </p>	
+				<div class=" sep-hor-light"></div>
+				<p class="p400">Практическое обучение проводится в специализированных классах, занятия по медицине проводятся на профильных тренажерах. Преподаватели в области подготовки кабинных экипажей - сертифицированные специалисты-практики. </p>
+			</div>
+
+
+			<div class="basic-block bb-black training-info">
+				<!--div class="pictures">
+					<img src="img/temp2.jpg" class="first">
+					<img src="img/temp.jpg" class="second">
+					<img src="img/temp3.jpg" class="third">
+				</div><br><br-->
+					
+				<p class="p400"> Осуществляется постоянный мониторинг: опросы в процессе обучения, тестирование, экзамены, проверка практических навыков работы в рейсовых условиях – на основании обратной связи со Службой бортпроводников. Качество обучения подтверждается качеством работы наших бортпроводников. Вопросы и проблемы, возникающие в рейсах – обязательная тема обсуждения на курсах повышения квалификации (КПК) и совместных со Службой бортпроводников заседаниях учебно-методического совета. 
+				</p>
+			</div>
+
+			<a id="study"></a>
+			<div class="slider-parent">
+				<h1 class="training-slider-header">Учебный компьютерный класс</h1>
+				<div class="slider training-slider">
+					<div class="slide"><img src="img/An/study/1.JPG"></div>
+					<div class="slide"><img src="img/An/study/2.JPG"></div>
+					<div class="slide"><img src="img/An/study/3.JPG"></div>
+				</div>
+			</div>
+
+			<div class="basic-block bb-white training-info">
+				<p class="p400">  Учебные классы оборудованы современными техническими средствами обучения. В лекционных классах расположены современные компьютеры с доступом к Учебно-компьютерному классу Ан-148 (CBT), а также проекторы, обеспечивающие наглядность учебного процесса.  </p>	
+				<!--p class="p400">Для проведения экзаменов и компьютерного тестирования оборудованы специализированные классы. </p-->
+			</div>
+
+
+			<div class="basic-block bb-black training-info">
+				<!--div class="pictures">
+					<img src="img/temp2.jpg" class="first">
+					<img src="img/temp.jpg" class="second">
+					<img src="img/temp3.jpg" class="third">
+				</div><br><br-->
+					
+				<p class="p400">Для проведения экзаменов и компьютерного тестирования оборудованы специализированные классы. 
+				</p>
+			</div>
 		<a id="obuch"></a>
 		<div class="basic-block bb-white almost-basic-block">
 			<div class="about-text"> <h1>Обучение</h1>
@@ -711,7 +767,7 @@
 						<p class="p400 p400-right">Ан-148 — ближнемагистральный пассажирский самолёт, рассчитанный на перевозку 
 						от 68 до 85 пассажиров. Разработан в ОКБ им. О.К. Антонова. Производится на 
 						Воронежском акционерном самолётостроительном заводе и Киевском заводе Авиант.</p>
-						<img src="img/plane-an148-1.png" class="toolarge">
+						<img src="img/plane-an148-3.png" class="toolarge">
 					</div>
 
 					<div class="flex">
@@ -1006,7 +1062,8 @@
 					<p>Адрес: Рублево-Успенское шоссе д.6</p>
 					<p>Тел./факс: +7 (495) 710-99-60 Доб. 335</p>
 					<br>
-					<iframe class="contact-map" src="https://www.google.com/maps/d/embed?mid=1uoGaGfEo4HFqKLrKFYYDPGwGcgE" width="500" height="480"></iframe>
+					<iframe class="contact-map" src="https://www.google.com/maps/d/embed?mid=14PrKsakSwfOX3Sq8HsfGJxWFb7k&hl=ru" width="500" height="480"></iframe>
+
 				</div>
 
 			</div>
@@ -1020,6 +1077,23 @@
 			<p class="footer-text">ifctra@gmail.com</p>
 		</div>
 	</footer>
+		<script type="text/javascript">
+		$('.slider').slick({
+			dots: true,
+			nextArrow: '<div class="slider-arrow arrow-next"><div><i class="fa fa-angle-right"></i></div></div>',
+  			prevArrow: '<div class="slider-arrow arrow-prev"><div><i class="fa fa-angle-left"></i></div></div>',
+		});
+
+	</script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+		<script type="text/javascript">
+		$('.slider').slick({
+			dots: true,
+			nextArrow: '<div class="slider-arrow arrow-next"><div><i class="fa fa-angle-right"></i></div></div>',
+  			prevArrow: '<div class="slider-arrow arrow-prev"><div><i class="fa fa-angle-left"></i></div></div>',
+		});
+
+	</script>
 </body>
 <script src="js/closeopen.js"></script>
 <script src="js/mobile-menu.js"></script>
