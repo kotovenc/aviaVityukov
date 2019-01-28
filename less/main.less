@@ -78,8 +78,8 @@ body ul li {
 		display: flex;
 		align-items: center;
 		width: 100%;
-		height: 85px;
-		padding: 40px;
+		height: 60px;
+		padding: 30px;
 		padding-right: 0px;
 		//font-weight: bold;
 		font-size: 20px;
@@ -89,7 +89,8 @@ body ul li {
 			z-index: 3;
 		}
 		&-bg{
-			box-shadow: 0 0 20px rgba(0, 0, 0, 0.75);
+			//box-shadow: 0 0 20px rgba(0, 0, 0, 0.75);
+			border-bottom: 1px solid rgba(0,0,0,0.2);
 			z-index: 1 !important;
 			position: absolute;
 			top: 0;
@@ -98,7 +99,7 @@ body ul li {
 			background-color: white;
 			width:100%;
 			height:100%;
-			transition: opacity .5s ease-out;
+			transition: opacity .2s ease-out;
 		}
 	}
 	&-slider{
@@ -113,8 +114,7 @@ body ul li {
 		font-weight: 500;
 		text-decoration: none;
 		color: white;
-		transition: background-color .5s ease-out,
-					color .5s ease-out;
+		transition: background-color .2s ease-out;
 	}
 	&-phone {
 		padding-top: 9px;
@@ -369,7 +369,7 @@ body ul li {
 
 .slide-content{
 	position: absolute;
-  	top: 50%;
+  	bottom: 0;
   	left: 50%;
   	transform: translate(-50%, -50%);
   	padding: 50px;
@@ -484,7 +484,7 @@ footer{
  // background-color: #000;
  	display: inline-block;
   	width: 100%;
-  	height: 85px;
+  	height: 60px;
   	position: fixed;
   	z-index: 10;
   	clear: both;
@@ -508,7 +508,7 @@ footer{
 
 /* Dropdown Content (Hidden by Default) */
 .dropdown-content {
-	background-color: white;
+	//background-color: white;
   display: none;
   position: relative;
   min-width: 150px;
@@ -555,7 +555,7 @@ ul{
 		position: absolute;
 		z-index: 5;
   		display: none;
-  		margin: 85px 0 0 0;
+  		margin: 60px 0 0 0;
   		width: 240px;
   		right: 0px;
   //	border-bottom: 5px solid rgba(0,0,0,0.2);
@@ -584,7 +584,7 @@ ul{
 .menu-link{
 	width: 200px;
   				display: inline-block;
-  				background-color: @lighterbg;
+  				//background-color: @lighterbg;
   				box-sizing: content-box;
   				//color: #000;
   				//height: 1em;
@@ -638,7 +638,7 @@ ul{
   		}
 	}
 	.menu-link{
-	margin-top: 20px;
+	margin-top: 10px;
   					width: auto;
 	}
 }
@@ -647,7 +647,7 @@ ul{
 position: relative;
 	z-index: 2;
   width: 38px;
-  margin: 30px 20px;
+  margin: 17px 20px;
   height: 30px;
   cursor: pointer;
   float: right;
@@ -1167,7 +1167,10 @@ position: relative;
 }
 
 .first-slider{
-	top: 85px;
+	top: 60px;
 	padding-bottom: 85px;
 }
-.
+
+.whiteBg{
+	background-color: white;
+}
