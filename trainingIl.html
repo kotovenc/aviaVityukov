@@ -16,57 +16,58 @@
 </head>
 <body>
 	<div class="header-panel" id="training">
-		<div class="header-panel-bg" style="opacity: 1"></div>
+		<div class="header-panel-bg"></div>
 		<div class="header-logo">
 			<a href="main.html"><img src="img/header-logo.png"></a>
 		</div>
 		<div class="header-phone">
-			<p class="header-text text-dark">+7 (495) 710-99-60 (Доб. 335)</p>
+			<p class="header-text">+7 (495) 710-99-60 (Доб. 335)</p>
 		</div>
 		<div class="header-nav">
 			<nav class="nav">
 				 <div class="hamburger-container">
 				    <ul class="hamburger">
-				      <li></li>
-				      <li></li>
-				      <li></li>
-				    </ul>
+					    <li class="ham-li" style="background-color: white;"></li>
+					    <li class="ham-li" style="background-color: white;"></li>
+					    <li class="ham-li" style="background-color: white;"></li>
+					</ul>
 				 </div>
 	 
 				<ul id="menu">
 				 	<li>
-						<a href="main.html" class="menu-link whiteBg"><p class="header-text text-dark hoverable">ГЛАВНАЯ</p></a>
+						<a href="main.html" class="header-text menu-link whiteBg"><p class="header-text hoverable">ГЛАВНАЯ</p></a>
 					</li>
 					<li>
-						<div class="dropdown dropbtn header-text text-dark menu-link whiteBg">
-							<p class="header-text text-dark">ТРЕНАЖЕРЫ</p>
-						  	<div class="dropdown-content whiteBg">
-						    	<a href="trainingAn.html"><p style="font-weight: 700;">Ан-148</p></a>
-						    	<a href="#main"><p style="font-weight: 700;">Ил-96</p></a>
-						    	<a href="#main"><p>Комплексный</p></a>
-						    	<a href="#snt"><p>СНТ</p></a>
+						<div class="dropdown dropbtn header-text menu-link whiteBg">
+							<p class="header-text">ТРЕНАЖЕРЫ</p>
+						  	<div class="dropdown-content header-text">
+						    	<a href="trainingAn.html"><p class="header-text hoverable">Ан-148</p></a>
+						    	<a href="#main"><p class="header-text hoverable">Ил-96</p></a>
+						    	<a href="#main"><p class="header-text hoverable">Комплексный</p></a>
+						    	<a href="#snt"><p class="header-text hoverable">СНТ</p></a>
 							 </div>
 						</div>
 					</li>
-					<li><a href="#obuch" class="menu-link whiteBg"><p class="header-text text-dark hoverable">ОБУЧЕНИЕ</p></a></li>
-					<li><a href="#plane" class="menu-link whiteBg"><p class="header-text text-dark hoverable">О САМОЛЕТЕ</p></a></li>
-					<li><a href="#contact" class="menu-link whiteBg"><p class="header-text text-dark hoverable">КОНТАКТЫ</p></a></li>
+					<li><a href="#obuch" class="header-text menu-link whiteBg"><p class="header-text hoverable">ОБУЧЕНИЕ</p></a></li>
+					<li><a href="#plane" class="header-text menu-link whiteBg"><p class="header-text hoverable">О САМОЛЕТЕ</p></a></li>
+					<li><a href="#contact" class="header-text menu-link whiteBg"><p class="header-text hoverable">КАК ДОБРАТЬСЯ</p></a></li>
 				</ul>
 			</nav>
 		</div>		
 	</div>
 	<main>
 		<a id="main"></a>
-			
+			<div class="training-gradient"></div>
 			<div class="slider-parent first-slider">
 				<h1 class="training-slider-header">Комплексный тренажер</h1>
 				<div class="slider training-slider">
-					<div class="slide"><img src="img/Il/kts/1.JPG"></div>
-					<div class="slide"><img src="img/Il/kts/2.JPG"></div>
-					<div class="slide"><img src="img/Il/kts/3.JPG"></div>
-					<div class="slide"><img src="img/Il/kts/4.JPG"></div>
-					<div class="slide"><img src="img/Il/kts/5.JPG"></div>
+					<div class="slide"><img src="img/Il/kts/0.jpg"></div>
+					<div class="slide"><img src="img/Il/kts/1.jpg"></div>
+					<div class="slide"><img src="img/Il/kts/2.jpg"></div>
+					<div class="slide"><img src="img/Il/kts/3.jpg"></div>
+					<div class="slide"><img src="img/Il/kts/4.jpg"></div>
 				</div>
+
 			</div>
 			<div class="basic-block bb-white">
 				<div class="about-text">
@@ -90,9 +91,9 @@
 			<div class="slider-parent">
 				<h1 class="training-slider-header">Тренажер СНТ</h1>
 				<div class="slider training-slider">
-					<div class="slide"><img src="img/Il/snt/1.JPG"></div>
-					<div class="slide"><img src="img/Il/snt/2.JPG"></div>
-					<div class="slide"><img src="img/Il/snt/3.JPG"></div>
+					<div class="slide"><img src="img/Il/snt/0.jpg"></div>
+					<div class="slide"><img src="img/Il/snt/1.jpg"></div>
+					<div class="slide"><img src="img/Il/snt/2.jpg"></div>
 				</div>
 			</div>
 			<div class="basic-block bb-white">
@@ -1036,6 +1037,16 @@
 	</script>
 </body>
 <script src="js/closeopen.js"></script>
+<script src="js/menu.js"></script>
 <script src="js/mobile-menu.js"></script>
+<script type="text/javascript">
+		//code for proper 100vh
+		let vh = window.innerHeight * 0.01;
+		document.documentElement.style.setProperty('--vh', `${vh}px`);
+		window.addEventListener('resize', () => {
+		  let vh = window.innerHeight * 0.01;
+		  document.documentElement.style.setProperty('--vh', `${vh}px`);
+		});
+	</script>
 
 </html>
